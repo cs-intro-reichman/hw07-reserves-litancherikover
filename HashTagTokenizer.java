@@ -48,9 +48,10 @@ public class HashTagTokenizer {
 		{
 			if (existInDictionary(hashtag.substring(0, i), dictionary)) 
 			{
+				//The script prints the word it found
 				System.out.println(hashtag.substring(0,i));
+				//Sending again using the cuting the part that we already recognized
 				breakHashTag(hashtag.substring(i), dictionary);
-				break;
 			}
         }
     }
