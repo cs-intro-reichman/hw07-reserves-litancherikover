@@ -32,8 +32,8 @@ public class SpellChecker {
 		}
 		else
 		{
-			return 1 + Math.min( Math.min(levenshtein(tail(word1), tail(word2)) ,
-			 levenshtein(word1, tail(word2))),levenshtein(word2, tail(word1)) ) ;
+			return 1+Math.min(levenshtein(word1.substring(1), word2.substring(1)),
+					Math.min(levenshtein(word1.substring(1), word2), levenshtein(word1, word2.substring(1))));
 		}
 	}
 
@@ -63,7 +63,7 @@ public class SpellChecker {
 				MinimalDistance = Distance;
 				MinimalWord = dictionary[i];
 			}
-			if (MinimalDistance < threshold)
+			if (MinimalDistance <= threshold)
 			{
 				return MinimalWord;
 			}
