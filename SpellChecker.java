@@ -12,11 +12,8 @@ public class SpellChecker {
 
 	public static String tail(String str) 
 	{
-		if (str.length() == 0) 
-		{
-			return "";
-		}
 		return str.substring(1);
+
 	}
 
 	public static int levenshtein(String word1, String word2) 
