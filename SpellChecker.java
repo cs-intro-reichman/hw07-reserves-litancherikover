@@ -46,7 +46,6 @@ public class SpellChecker {
 		{
 			//Insert each word into the dict
 			dictionary[i]=in.readLine(); 
-			break;
 		}
 		return dictionary;
 	}
@@ -55,7 +54,7 @@ public class SpellChecker {
 	{
 		String MinimalWord = "";
 		int MinimalDistance = word.length(); 
-		for(int i = 1; i < dictionary.length; i++)
+		for(int i = 0; i < dictionary.length; i++)
 		{
 			//Get back the distance between the word from dict and the input
 			int Distance = levenshtein(dictionary[i], word);
