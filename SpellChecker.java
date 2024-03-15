@@ -29,8 +29,8 @@ public class SpellChecker {
 		}
 		else
 		{
-			return 1+Math.min(levenshtein(word1.substring(1), word2.substring(1)),
-					Math.min(levenshtein(word1.substring(1), word2), levenshtein(word1, word2.substring(1))));
+			return 1+Math.min(levenshtein(word1.substring(1), word2.substring(1))
+			,Math.min(levenshtein(word1.substring(1), word2), levenshtein(word1, word2.substring(1))));
 		}
 	}
 
