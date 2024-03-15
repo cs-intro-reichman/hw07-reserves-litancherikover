@@ -46,6 +46,7 @@ public class SpellChecker {
 		{
 			//Insert each word into the dict
 			dictionary[i]=in.readLine(); 
+			break;
 		}
 		return dictionary;
 	}
